@@ -19,30 +19,28 @@ submitBtn.addEventListener("click", function() {
     console.log(userAge, typeof(userAge));
 
     // Elaborazione ed output
-if (userAge < 18 ) {
     userPrice = basePrice * userDistance ;
-    let userDiscountedPrice = ( userPrice - (userPrice * youngDiscount));
 
+if (userAge < 18 ) {
+    userPrice = ( userPrice - (userPrice * youngDiscount));
+    userPrice = Math.trunc(userPrice*100)/100; 
 }
 
 else if (userAge >= 65 ) {
-    userPrice = basePrice * userDistance ;
-    let userDiscountedPrice = ( userPrice - (userPrice * oldDiscount));
-    console.log("Prezzo da troncare:",userDiscountedPrice);
-    userDiscountedPrice = Math.trunc(userDiscountedPrice*100)/100;
-    console.log("Prezzo troncato:",userDiscountedPrice);
+    userPrice = ( userPrice - (userPrice * oldDiscount));
+    userPrice = Math.trunc(userPrice*100)/100; 
 }
 
 else {
-    userPrice = basePrice * userDistance ;
-    let userDiscountedPrice = userPrice;
-    console.log("Prezzo da troncare:",userDiscountedPrice);
-    userDiscountedPrice = Math.trunc(userDiscountedPrice*100)/100;
-    console.log("Prezzo troncato:",userDiscountedPrice);
+    userPrice = Math.trunc(userPrice*100)/100; 
 }
 
-console.log("Prezzo da troncare:",userDiscountedPrice);
-userDiscountedPrice = Math.trunc(userDiscountedPrice*100)/100;
-console.log("Prezzo troncato:",userDiscountedPrice);
+// Ripulisco l'input
+userDistanceInput.value = "";
+userAgeInput.value = "";
+
+// Stampiamo a schermo il risultato
+document.getElementById("result").innerHTML = userPrice;
+
 });
 
