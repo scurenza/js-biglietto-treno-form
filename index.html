@@ -23,11 +23,26 @@
     </div>
 
     <div>
-      <button id="submit">Submit!</button>
+      <h3>Tassi di cambio</h3>
+      <p>1€ = 0.8£</p>
+      <p>1€ = 1.2$</p>
+      <label for="currency">In che valuta vuoi pagare?</label>
+      <select name="" id="currency">
+        <option value=""></option>
+        <option value="euro">€</option>
+        <option value="pound">£</option>
+        <option value="dollar">$</option>
+      </select>
     </div>
 
     <div>
-      <h1>Dovrai pagare <span id="result"></span> €</h1>
+      <button id="submit">Submit!</button>
+
+      <button id="cancel">Cancel</button>
+    </div>
+
+    <div>
+      <h1>Dovrai pagare <span id="result"></span></h1>
     </div>
     <script src="js/script.js"></script>
   </body>

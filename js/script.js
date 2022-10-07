@@ -39,8 +39,21 @@ else {
 userDistanceInput.value = "";
 userAgeInput.value = "";
 
-// Stampiamo a schermo il risultato
-document.getElementById("result").innerHTML = userPrice;
 
+// Stampiamo a schermo il risultato
+if (document.getElementById('currency').value === 'euro') {
+    document.getElementById("result").innerHTML = userPrice + '€';
+    }
+
+if (document.getElementById('currency').value === 'pound') {
+document.getElementById("result").innerHTML = (Math.trunc( (userPrice * 0.8)*100)/100) + '£';
+}
+
+if (document.getElementById('currency').value === 'dollar') {
+    document.getElementById("result").innerHTML = (Math.trunc( (userPrice * 1.2)*100)/100) + '$';
+    }
+
+// Ripulisco campo valuta
+currency.value = "";
 });
 
