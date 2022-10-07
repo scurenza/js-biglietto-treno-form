@@ -12,37 +12,44 @@
   </head>
   <body>
     <!-- Form -->
-    <div>
-      <label for="userDistance">Quanti km devi percorrere?</label>
-      <input type="text" name="" id="userDistance" />
+    <div class="container">
+      <h1 class="title">Calcolatore prezzo biglietto</h1>
+      <div class="red-border">
+        <label for="userDistance">Quanti km devi percorrere?</label>
+        <input type="text" name="" id="userDistance" />
+        <p>La tariffa base è di 0.21€/km</p>
+      </div>
+
+      <div class="red-border">
+        <label for="userAge">Quanti anni hai?</label>
+        <input type="text" name="" id="userAge" />
+        <p>
+          I minorenni hanno diritto ad uno sconto del 20%, gli over65 invece
+          hanno diritto ad uno sconto del 40%!!
+        </p>
+      </div>
+
+      <div class="red-border">
+        <h3>Tassi di cambio</h3>
+        <p>1 € = 0.88 £</p>
+        <p>1 € = 0.98 $</p>
+        <label for="currency">In che valuta vuoi pagare?</label>
+        <select name="" id="currency">
+          <option value=""></option>
+          <option value="euro">€</option>
+          <option value="pound">£</option>
+          <option value="dollar">$</option>
+        </select>
+      </div>
+
+      <div class="grey-border">
+        <button id="submit">Submit!</button>
+
+        <button id="cancel">Cancel</button>
+      </div>
     </div>
-
-    <div>
-      <label for="userAge">Quanti anni hai?</label>
-      <input type="text" name="" id="userAge" />
-    </div>
-
-    <div>
-      <h3>Tassi di cambio</h3>
-      <p>1€ = 0.8£</p>
-      <p>1€ = 1.2$</p>
-      <label for="currency">In che valuta vuoi pagare?</label>
-      <select name="" id="currency">
-        <option value=""></option>
-        <option value="euro">€</option>
-        <option value="pound">£</option>
-        <option value="dollar">$</option>
-      </select>
-    </div>
-
-    <div>
-      <button id="submit">Submit!</button>
-
-      <button id="cancel">Cancel</button>
-    </div>
-
-    <div>
-      <h1>Dovrai pagare <span id="result"></span></h1>
+    <div class="container green-border">
+      <h1>Dovrai pagare <span id="result" class="title"></span></h1>
     </div>
     <script src="js/script.js"></script>
   </body>

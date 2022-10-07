@@ -5,12 +5,13 @@ const oldDiscount = 0.4;
 let userPrice = 0;
 
 const submitBtn = document.getElementById("submit");
+const cancelBtn = document.getElementById("cancel");
 
 // Prendo gli input
 let userDistanceInput = document.getElementById("userDistance");
 let userAgeInput =document.getElementById("userAge");
 
-// Submit al click del bottone
+// Submit al click del bottone submitBtn
 submitBtn.addEventListener("click", function() {
     // elaboro gli input
     let userDistance = parseInt(userDistanceInput.value);
@@ -46,14 +47,22 @@ if (document.getElementById('currency').value === 'euro') {
     }
 
 if (document.getElementById('currency').value === 'pound') {
-document.getElementById("result").innerHTML = (Math.trunc( (userPrice * 0.8)*100)/100) + '£';
+document.getElementById("result").innerHTML = (Math.trunc( (userPrice * 0.88)*100)/100) + '£';
 }
 
 if (document.getElementById('currency').value === 'dollar') {
-    document.getElementById("result").innerHTML = (Math.trunc( (userPrice * 1.2)*100)/100) + '$';
+    document.getElementById("result").innerHTML = (Math.trunc( (userPrice * 0.98)*100)/100) + '$';
     }
 
 // Ripulisco campo valuta
 currency.value = "";
+});
+
+// Submit al click del bottone cancelBtn
+cancelBtn.addEventListener("click", function() {
+    // Ripulisco campi
+    userDistanceInput.value = "";
+    userAgeInput.value = "";
+    currency.value = "";
 });
 
