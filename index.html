@@ -15,6 +15,11 @@
     <div class="container grey-dashed-border">
       <h1 class="title">Calcolatore prezzo biglietto</h1>
       <div class="red-border">
+        <label for="userNameInput">Nome Passeggero: </label>
+        <input type="text" name="" id="userNameInput" />
+      </div>
+
+      <div class="red-border">
         <label for="userDistance">Quanti km devi percorrere?</label>
         <input type="text" name="" id="userDistance" />
         <p>La tariffa base è di 0.21€/km</p>
@@ -48,8 +53,18 @@
         <button id="cancel">Cancel</button>
       </div>
     </div>
-    <div class="container green-border">
-      <h1>Dovrai pagare <span id="result" class="title"></span></h1>
+    <div class="container green-border ticket">
+      <div class="userName">
+        <h2>Nome Passeggero</h2>
+        <span id="userName"></span>
+      </div>
+      <div class="userName">
+        <h2>Codice Univoco</h2>
+        <span id="unicCode"></span>
+      </div>
+      <div class="userName">
+        <h1>Dovrai pagare <span id="result" class="title"></span></h1>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

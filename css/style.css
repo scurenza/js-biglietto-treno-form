@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
     width: 90%;
     margin: 0 auto;
@@ -31,6 +36,13 @@
     border-radius: 30px;
 }
 
+.white{
+    color: white;
+    filter: brightness(100%);
+}
+
+
+
 /* Style */
 body{
     background-color: rgba(255, 192, 203, 0.150);
@@ -38,4 +50,33 @@ body{
 
 .title{
     text-decoration: underline;
+}
+
+.userName{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 300px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: grey;
+    border-radius: 30px;
+}
+
+.userName span{
+    font-size: 2rem;
+    background-color: yellowgreen;
+    width: min-content;
+    
+}
+
+h1{
+    margin: 1rem 0;
+}
+
+.ticket{
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-between;
 }
